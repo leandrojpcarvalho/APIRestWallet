@@ -2,7 +2,6 @@ import { Request, Response } from 'express';
 import * as yup from 'yup';
 import { validation } from '../../shared/middlewares';
 import { StatusCodes } from 'http-status-codes';
-
 interface GetAllProps {
   page?: yup.Maybe<number|undefined>;
   limit?: yup.Maybe<number|undefined>; 
@@ -18,5 +17,19 @@ export const getAllValidation = validation((getSchema) => ({
 }));
 
 export const getAll = async (req: Request<{}, {}, {}, GetAllProps>, res: Response) => {
-  return res.status(StatusCodes.INTERNAL_SERVER_ERROR).send('não implementado');
+  res.setHeader('access-control-expose-headers', 'x-total-count');
+  res.setHeader('x-total-count', 2);
+  return res.status(StatusCodes.OK).json([
+    {
+      id: 1,
+      name: 'leandro',
+      expenses: []
+    },
+    {
+      id: 2,
+      name: 'gabriela',
+      expenses: []
+    }
+  ]
+  );
 };
