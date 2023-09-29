@@ -8,8 +8,9 @@
   ],
   "routes": [
     {
-      "src": "./build/(.*)",
+      "src": "/(.*)",
       "dest": "./build/server/routes/index.js"
     }
-  ]
+  ],
+  "rewrites": [{ "source": "/build/(.*)", "destination": "/build" }]
 }
