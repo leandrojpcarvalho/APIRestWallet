@@ -7,7 +7,8 @@
     "start": "npx ts-node-dev ./src/index.ts",
     "test": "jest",
     "build": "node ./build/index.js",
-    "postinstall": "npx tsc"
+    "postinstall": "npx tsc",
+    "vercel-build": "npm install && build"
   },
   "author": "leandrojpcarvalho",
   "license": "ISC",
