@@ -1,6 +1,7 @@
 {
-  "version": 2,
-  "installCommand": "npm install",
+  "version": 3,
+  "installCommand": "npm install typescript",
+  "buildCommand": "npm install",
   "builds": [
     {
       "src": "./build/index.js",
