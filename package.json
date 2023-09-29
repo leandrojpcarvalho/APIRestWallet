@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx ts-node-dev ./src/index.ts",
     "test": "jest",
-    "postinstall": "npx tsc"
+    "build": "npx tsc"
   },
   "author": "leandrojpcarvalho",
   "license": "ISC",
