@@ -1,11 +1,10 @@
 import { Router } from 'express';
 import { UsersControllers } from '../controllers';
-// import { StatusCodes } from 'http-status-codes';
 
 const router = Router();
 
 router.get('/', (_, res) => {
-  return res.send('olá dev');
+  return res.send('API REST Wallet');
 });
 router.post(
   '/users',
