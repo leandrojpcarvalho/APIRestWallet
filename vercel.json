@@ -1,6 +1,16 @@
 {
-  "version": 2,
-  "installCommand": "npm install typescript",
-  "devCommand": "npm run postinstall",
-  "buildCommand": "npm run build"
+  "version": 3,
+  "installCommand": "npm install",
+  "builds": [
+    {
+      "src": "./build/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "./build/(.*)",
+      "dest": "./build/server/routes/index.js"
+    }
+  ]
 }
